@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html >
+<body style = "background-color: rgb(188, 21, 21);">
+ <div class="login">
+  <center>
+    <h1>Used Car Price Prediction</h1>
+    <form action="{{ url_for('predict')}}"method="post">
+        <label>make</label>
+    	  <select name="make" id="make">
+          <option value="19" id ="make">toyota</option>
+          <option value="12" id ="make">nissan</option>
+          <option value="8" id ="make">mazda</option>
+          <option value="11" id ="make">mitsubishi</option>
+          <option value="5" id ="make">honda</option>
+          <option value="20" id ="make">volkswagen</option>
+          <option value="18" id ="make">subaru</option>
+          <option value="13" id ="make">peugot</option>
+          <option value="21" id ="make">volvo</option>
+          <option value="4" id ="make">dodge</option>
+          <option value="9" id ="make">mercedes-benz</option>
+          <option value="2" id ="make">bmw</option>
+          <option value="1" id ="make">audi</option>
+          <option value="14" id ="make">plymouth</option>
+          <option value="17" id ="make">saab</option>
+          <option value="15" id ="make">porsche</option>
+          <option value="6" id ="make">isuzu</option>
+          <option value="7" id ="make">jaguar</option>
+          <option value="3" id ="make">chevrolet</option>
+          <option value="0" id ="make">alfa-romero</option>
+          <option value="16" id ="make">renault</option>
+          <option value="10" id ="make">mercury</option>
+        </select>
+        <br><br>
+        <label>fuel-type</label>
+    	  <select name="fuel-type" id="fuel-type">
+          <option value="1" id ="fuel-type">gas</option>
+          <option value="0" id ="fuel-type">diesel</option>
+        </select>
+        <br><br>
+        <label>aspiration</label>
+    	  <select name="aspiration" id="aspiration">
+          <option value="0" id ="aspiration">std</option>
+          <option value="1" id ="aspiration">turbo</option>
+        </select>
+        <br><br>
+        <label>num-of-doors</label>
+    	  <select name="num-of-doors" id="num-of-doors">
+          <option value="4" id ="num-of-doors">four</option>
+          <option value="2" id ="num-of-doors">two</option>
+        </select>
+        <br><br>
+        <label>drive-wheels</label>
+    	  <select name="drive-wheels" id="drive-wheels">
+          <option value="1" id ="drive-wheels">fwd</option>
+          <option value="2" id ="drive-wheels">rwd</option>
+          <option value="0" id ="drive-wheels">4wd</option>
+        </select>
+        <br><br>
+        <label>engine-location</label>
+    	  <select name="engine-location" id="engine-location">
+          <option value="1" id ="engine-location">rear</option>
+          <option value="0" id ="engine-location">front</option>
+        </select>
+        <br><br>
+        <label>wheel-base</label>
+		    <input type="text" name="wheel-base" placeholder="wheel-base" required="required" />
+        <br><br>
+        <label>length</label>
+		    <input type="text" name="length" placeholder="length" required="required" />
+        <br><br>
+        <label>width</label>
+		    <input type="text" name="width" placeholder="width" required="required" />
+        <br><br>
+        <label>height</label>
+		    <input type="text" name="height" placeholder="height" required="required" />
+        <br><br>
+        <label>curb-weight</label>
+		    <input type="text" name="curb-weight" placeholder="curb-weight" required="required" />
+        <br><br>
+        <label>num-of-cylinder</label>
+    	  <select name="num-of-cylinder" id="num-of-cylinder">
+          <option value="4" id ="num-of-cylinder">four</option>
+          <option value="6" id ="num-of-cylinder">six</option>
+          <option value="5" id ="num-of-cylinder">five</option>
+          <option value="8" id ="num-of-cylinder">eight</option>
+          <option value="2" id ="num-of-cylinder">two</option>
+          <option value="3" id ="num-of-cylinder">three</option>
+          <option value="12" id ="num-of-cylinder">twelve</option>
+        </select>
+        <br><br>
+        <label>engine-size</label>
+		    <input type="text" name="engine-size" placeholder="engine-size" required="required" />
+        <br><br>
+        <label>bore</label>
+		    <input type="text" name="bore" placeholder="bore" required="required" />
+        <br><br>
+        <label>stroke</label>
+		    <input type="text" name="stroke" placeholder="stroke" required="required" />
+        <br><br>
+        <label>compression-ratio</label>
+		    <input type="text" name="compression-ratio" placeholder="compression-ratio" required="required" />
+        <br><br>
+        <label>horsepower</label>
+		    <input type="text" name="horsepower" placeholder="horsepower" required="required" />
+        <br><br>
+        <label>peak-rpm</label>
+		    <input type="text" name="peak-rpm" placeholder="peak-rpm" required="required" />
+        <br><br>
+        <label>city-mpg</label>
+		    <input type="text" name="city-mpg" placeholder="city-mpg" required="required" />
+        <br><br>
+        <label>highway-mpg</label>
+		    <input type="text" name="highway-mpg" placeholder="highway-mpg" required="required" />
+        <br><br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+   <br>
+   <br>
+   {{ prediction_text }}
+  </center>
+
+ </div>
+
+
+</body>
+</html>
